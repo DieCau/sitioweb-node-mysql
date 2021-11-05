@@ -11,9 +11,4 @@ router.get('/nosotros', function(req, res, next) {
   res.render('nosotros', { title: 'Nosotros somos... ' });
 });
 
-/* GET Section(productos.ejs). */
-router.get('/productos', function(req, res, next) {
-  res.render('productos', { title: 'Nuestros productos...' });
-});
-
 module.exports = router;
