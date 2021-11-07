@@ -17,11 +17,6 @@ connection.connect(
 module.exports = connection;
 
 
-/*connection.query("SELECT * FROM tblproductos" , function (err, resultados) {
-  console.log(resultados);
-});
-
-connection.end();*/
 
 
 

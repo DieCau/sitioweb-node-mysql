@@ -1,28 +1,28 @@
 <%- include layouts/header.ejs %>
 
-<div class="container">
+<div class="container my-3">
 
   <h1><%= title %></h1>
 
+  
   <div class="row">
-    <div class="col-sm-6">
-      <div class="card">
+    <% for(var libro=0;libro<Libros.length;libro++) { %>
+    
+      <div class="col-sm-3">
+      <div class="card mt-3">
+        <img src="<%=Libros[libro].imagen %>" class="card-img-top" height="317" alt="Libros">
         <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title"> <%=Libros[libro].titulo %> </h5>
+          <p class="card-text"> <%=Libros[libro].descripcion %></p>
+          <h5>$<%=Libros[libro].precio %> </h5> 
+          <a href="#" class="btn btn-primary">Comprar Ya!</a>
         </div>
       </div>
     </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
+
+      <% } %>
+    
+
   </div>
 </div>
 
